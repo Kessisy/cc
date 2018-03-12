@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>在此处插入标题</title>
+</head>
+
+    <body>
+    
+    {%block title%}{{page_title}}{%endblock%}
+    {%block main%}
+    <div class="form">
+    <div class="message">{{state.message}}</div>
+    
+    <form action="/signup/" method="post">
+   
+    <table>
+    <tr>
+      <td>Username:</td>
+      <td><input name='username' value="{{state.form.username}}">
+     </tr>
+     <tr>
+      <td>password:</td>
+      <td><input name='password' value="{{state.form.password}}">
+     </tr>
+     <tr>
+      <td>comfirm password:</td>
+      <td><input name='comfirm' value="{{state.form.comfirm}}">
+     </tr>
+     <tr>
+      <td>email:</td>
+      <td><input name='email' value="{{state.form.email}}">
+     </tr>
+     <tr>
+      <td><input type="submit",value="submit">
+      </tr>
+     </table>
+     </form>
+    </div>
+   {%endblock%}
+</html>
